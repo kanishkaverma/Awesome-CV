@@ -29,9 +29,9 @@
 % Color for highlights
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
-\colorlet{awesome}{awesome-red}
+% \colorlet{awesome}{awesome-concrete}
 % Uncomment if you would like to specify your own color
-% \definecolor{awesome}{HTML}{CA63A8}
+\definecolor{awesome}{HTML}{446CB3}
 
 % Colors for text
 % Uncomment if you would like to specify your own color
@@ -41,7 +41,7 @@
 % \definecolor{lighttext}{HTML}{999999}
 
 % Set false if you don't want to highlight section with awesome color
-\setbool{acvSectionColorHighlight}{true}
+\setbool{acvSectionColorHighlight}{false}
 
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
@@ -54,8 +54,9 @@
 % Available options: circle|rectangle,edge/noedge,left/right
 % \photo[rectangle,edge,right]{./examples/profile}
 \name{Kanishka}{Verma}
-\position{Software Architect{\enskip\cdotp\enskip}Computer Science Major and Data Science Minor}
-\address{1088 Sunset Drive, Kelowna, BC, V1Y 9W1}
+\position{Kelowna, BC{\enskip\cdotp\enskip}Computer Science Major and Data Science Minor}
+% \extrainfo{Kelowna, BC}
+% \address{Kelowna, BC}
 
 \mobile{236-457-3876}
 \email{kanisverma@gmail.com}
@@ -76,6 +77,9 @@
 % \quote{``Be the change that you want to see in the world."}
 
 
+\makeatletter
+\def\@sectioncolor{\color{awesome}}
+\makeatother
 %-------------------------------------------------------------------------------
 \begin{document}
 
@@ -96,9 +100,13 @@
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
 \input{cv/skills.tex}
+\vspace{-4.0mm}
 \input{resume/experience.tex}
+\vspace{-4.0mm}
 \input{resume/education.tex}
+\vspace{-4.0mm}
 \input{resume/projects.tex}
+
 
 
 %-------------------------------------------------------------------------------
